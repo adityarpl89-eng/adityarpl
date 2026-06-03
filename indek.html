@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Smart Lamp Premium</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="bg"></div>
+
+  <div class="container">
+
+    <!-- HEADER -->
+    <div class="topbar">
+
+      <div>
+        <h1>🏠 Smart Home IoT</h1>
+        <p>Modern Smart Lighting Dashboard</p>
+      </div>
+
+      <div class="clock-box">
+        <h2 id="clock">00:00:00</h2>
+        <span>Realtime System</span>
+      </div>
+
+    </div>
+
+    <!-- WIFI STATUS -->
+<div class="wifi-card">
+
+  <div class="wifi-left">
+
+    <div class="wifi-animation">
+
+      <div class="wave wave1"></div>
+      <div class="wave wave2"></div>
+      <div class="wave wave3"></div>
+
+      <div class="wifi-center">
+        📶
+      </div>
+
+    </div>
+
+    <div class="wifi-info">
+
+      <h2>WiFi Connection</h2>
+
+      <p id="wifiText">
+        Connecting...
+      </p>
+
+      <small id="wifiSpeed">
+        Checking network speed...
+      </small>
+
+    </div>
+
+  </div>
+
+  <div class="wifi-right">
+
+    <div class="wifi-status" id="wifiStatus">
+      ONLINE
+    </div>
+
+    <div class="ping-box">
+
+      <span class="ping-dot"></span>
+
+      <span id="pingText">
+        12 ms
+      </span>
+
+    </div>
+
+  </div>
+
+</div>
+    <!-- LAMPU -->
+    <div class="grid">
+
+      <!-- LAMPU 1 -->
+      <div class="lamp-card">
+
+        <div class="lamp-header">
+
+          <div>
+            <h2>Lampu Ruang Tamu</h2>
+            <p>Relay Channel 1</p>
+          </div>
+
+          <div class="dot on-dot" id="dot1"></div>
+
+        </div>
+
+        <!-- LAMPU -->
+        <div class="lamp-wrapper">
+
+          <div class="lamp on-lamp" id="lamp1">
+            💡
+          </div>
+
+        </div>
+
+        <h1 class="status-text" id="status1">
+          ON
+        </h1>
+
+        <!-- SWITCH -->
+        <div class="switch-box">
+
+          <button class="switch-btn on-btn"
+          onclick="lampu1On()">
+            ON
+          </button>
+
+          <button class="switch-btn off-btn"
+          onclick="lampu1Off()">
+            OFF
+          </button>
+
+        </div>
+        <!-- AUTO TIMER -->
+<div class="auto-box">
+
+  <h3>⏰ Auto Timer</h3>
+
+  <input type="time" id="onTime1">
+
+  <label>Waktu ON</label>
+
+  <input type="time" id="offTime1">
+
+  <label>Waktu OFF</label>
+
+  <button class="save-btn"
+  onclick="saveTimer1()">
+    Simpan Jadwal
+  </button>
+
+</div>
+
+        <div class="activity">
+          <p>⏰ Last Activity</p>
+          <span id="time1">Lampu dinyalakan</span>
+        </div>
+
+      </div>
+
+      <!-- LAMPU 2 -->
+      <div class="lamp-card">
+
+        <div class="lamp-header">
+
+          <div>
+            <h2>Lampu Kamar</h2>
+            <p>Relay Channel 2</p>
+          </div>
+
+          <div class="dot off-dot" id="dot2"></div>
+
+        </div>
+
+        <!-- LAMPU -->
+        <div class="lamp-wrapper">
+
+          <div class="lamp off-lamp" id="lamp2">
+            💡
+          </div>
+
+        </div>
+
+        <h1 class="status-text" id="status2">
+          OFF
+        </h1>
+
+        <!-- SWITCH -->
+<div class="switch-box">
+
+  <button class="switch-btn on-btn"
+  onclick="lampu2On()">
+    ON
+  </button>
+
+  <button class="switch-btn off-btn"
+  onclick="lampu2Off()">
+    OFF
+  </button>
+
+</div>
+
+<!-- AUTO TIMER -->
+<div class="auto-box">
+
+  <h3>⏰ Auto Timer</h3>
+
+  <input type="time" id="onTime2">
+
+  <label>Waktu ON</label>
+
+  <input type="time" id="offTime2">
+
+  <label>Waktu OFF</label>
+
+  <button class="save-btn"
+  onclick="saveTimer2()">
+    Simpan Jadwal
+  </button>
+
+</div>
+
+<div class="activity">
+  <p>⏰ Last Activity</p>
+  <span id="time2">Belum ada aktivitas</span>
+</div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
